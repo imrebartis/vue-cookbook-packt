@@ -9,7 +9,7 @@
 <body>
   <div id="app"> 
       <ul> 
-        <li v-for="(animal, i) in animals">The {{animal}} goes {{sounds[i]}}</li> 
+        <li v-for="(sound, name) in animals">The {{name}} goes {{sound}}</li> 
       </ul> 
   </div>
 
@@ -17,9 +17,8 @@
     new Vue({
       el: '#app',
       data: { 
-            animals: [
-              'dog', 'cat', 'bird' ],
-            sounds: ['woof', 'meow', 'tweet']
+            animals: { 
+              dog: 'woof', cat: 'meow', bird: 'tweet'}
       }
 })
   </script>
